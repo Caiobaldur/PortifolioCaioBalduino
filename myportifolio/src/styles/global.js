@@ -9,5 +9,7 @@ export default createGlobalStyle`
 
   :root {
     font-size: 62.5%;
+    --ff-primary: 'Roboto', sans-serif;
+    --h-font: 'Victor Mono', monospace;
   }
 `;

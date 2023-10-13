@@ -6,6 +6,7 @@ export default {
 
     GRAY_100: "#ABB2BF",
 
-    GREEN: "#224425"
+    GREEN_100: "#224425",
+    GREEN_200: "#2AA18B",
   }
 }
