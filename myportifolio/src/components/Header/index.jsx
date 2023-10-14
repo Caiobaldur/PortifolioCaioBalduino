@@ -1,6 +1,7 @@
-import { Container, Name, Link } from "./styles";
+import { Container, Name, Link, Menu } from "./styles";
+import {RiMenu3Fill} from "react-icons/ri"
 
-export function Header() {
+export function Header({ setMenuIsVisible }) {
 
   return (
     <Container>
@@ -10,14 +11,19 @@ export function Header() {
           </Name>
             <Link>
               <ul>
-                <li>Home</li>
-                <li>Projetos</li>
-                <li>Sobre</li>
-                <li>Contato</li>
+                <li><a href=""><span>#</span>Home</a></li>
+                <li><a href=""><span>#</span>Projetos</a></li>
+                <li><a href=""><span>#</span>Sobre</a></li>
+                <li><a href=""><span>#</span>Contato</a></li>
               </ul>
             </Link>
-              
-  
+            <Menu>
+              <RiMenu3Fill size={25} onClick={() => setMenuIsVisible(true)}/>
+            </Menu>
+            
     </Container>
-  )
+
+    
+  );
 }
+
