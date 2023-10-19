@@ -2,10 +2,9 @@ import styled from "styled-components"
 
 
 
-export const Container = styled.header`
-  grid-area: header;
-  height: 6.5rem;
-  width: 100%;
+export const Container = styled.div`
+  max-width: 100%;
+  margin: 0 auto;
   border-bottom: 0.1rem;
   border-bottom-style: solid;
   border-bottom-color: ${({ theme }) => theme.COLORS.GREEN_200};
@@ -16,74 +15,48 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 20rem;
+  padding: 2.5rem 20rem;
 
   @media (max-width: 1024px) {
-    padding: 0 12rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 
-  @media (max-width: 768px) {
-    padding: 0 3rem;
-  }
-`
+  
+`;
 
 export const Name = styled.div`
-  white-space: nowrap;
-`
+  font-size: 1.3rem;
+`;
 
 export const Link = styled.nav`
-  > ul {
+  > nav {
     display: flex;
-    gap: 2rem;
+    gap: .5rem;
     list-style: none;
-    font-size: 1.8rem;
-    flex-flow: row nowrap;
+    font-size: 2rem;
+    justify-content: center;
   }
   
-  > ul li a {
+  > nav li a {
     text-decoration: none;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
     transition: .5s ease-in-out;
+    padding: 1rem 1.2rem;
+    display: block;
   }
 
-  > ul li span {
+  > nav li span {
     color: ${({ theme }) => theme.COLORS.GREEN_200};
   }
 
-  ul li a:hover {
+  > nav li a:hover {
     color: #fff;
     transition: .5s ease-in-out;
   }
 
-  @media (max-width: 768px) {
-    > ul {
-      display: none;
-      flex-flow: column nowrap;
-      background-color: #282C33;
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100vh;
-      width: 30rem;
-      padding-left: 2rem;
-      padding-top: 3.5rem;
-      border-left: #2AA18B .1rem solid;
-    }
 
 
-  }
-`;
 
-export const Menu = styled.button`
-  display: none;
-
-  @media (max-width: 768px) {
-    display: flex;
-    border: none;
-    background: none;
-    > svg{
-      color: ${({theme}) => theme.COLORS.GREEN_200};
-      font-size: 3.5rem;
-    }
-  }
 `;
